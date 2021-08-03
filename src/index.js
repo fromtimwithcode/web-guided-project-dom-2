@@ -32,18 +32,22 @@ launchButton.addEventListener('click', (event) => {
     even target: ${event.target.nodeName}`);
 });
 
-document.addEventListener('click', (event) => {
-    if (event.target === launchButton) {
-        console.log("Clicked the launch button!");
-    } else {
-        console.log("Clicked somewhere else...");
-    }
-});
+// document.addEventListener('click', (event) => {
+//     if (event.target === launchButton) {
+//         console.log("Clicked the launch button!");
+//     } else {
+//         console.log("Clicked somewhere else...");
+//     }
+// });
 
 // 👉 TASK 3- Create a function that launches!
 // It should open the confirmation modal.
 // Add it as an event listener for click events on the launch button.
+function launch(event) {
+    modal.classList.remove('off');
+}
 
+launchButton.addEventListener('click', launch);
 
 // 👉 TASK 4- Create a function to confirm the launch.
 // It should close the modal and display a success report.
